@@ -11,9 +11,6 @@ import play.api.libs.json.JsValue
 import akka.actor.actorRef2Scala
 import scala.math.BigDecimal.int2bigDecimal
 import scala.math.BigDecimal.long2bigDecimal
-import models.Refresh
-import models.Connected
-import models.Connect
 
 class StatisticsActor( hostid: String ) extends Actor {
   val ( enumerator, channel ) = Concurrent.broadcast[JsValue]

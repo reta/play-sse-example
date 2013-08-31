@@ -34,7 +34,7 @@ object Statistics {
 	   }
 	}
 	
-	def attach( host: Host ): Future[ Enumerator[ String ] ] = {
+	def attach( host: Host ): Future[ Enumerator[ JsValue ] ] = {
 	  ( actor( host.id ) ? Connect( host ) ).map {      
       	case Connected( enumerator ) => enumerator
 	  }
